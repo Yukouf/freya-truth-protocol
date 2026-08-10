@@ -1,35 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="monospace">
   <rect width="800" height="400" fill="#0d1117" rx="10"/>
-  
+
   <!-- Claim -->
   <rect x="250" y="20" width="300" height="50" fill="#1a2332" stroke="#30363d" rx="8"/>
   <text x="400" y="50" text-anchor="middle" fill="#c9d1d9" font-size="14" font-weight="bold">🎯 AFFIRMATION</text>
-  
-  <!-- Arrows -->
+
+  <!-- Sequential flow: Claim -> Defender -> Challenger -->
   <line x1="400" y1="70" x2="200" y2="140" stroke="#3fb950" stroke-width="2"/>
-  <line x1="400" y1="70" x2="600" y2="140" stroke="#f85149" stroke-width="2"/>
-  
+  <line x1="350" y1="185" x2="450" y2="185" stroke="#f85149" stroke-width="2"/>
+
   <!-- Defender -->
   <rect x="50" y="140" width="300" height="90" fill="#1a2332" stroke="#3fb950" rx="8"/>
   <text x="200" y="170" text-anchor="middle" fill="#3fb950" font-size="18">🟢 DEFENDER</text>
   <text x="200" y="195" text-anchor="middle" fill="#8b949e" font-size="12">Défend avec des preuves</text>
   <text x="200" y="215" text-anchor="middle" fill="#8b949e" font-size="12">Score de confiance /10</text>
-  
+
   <!-- Challenger -->
   <rect x="450" y="140" width="300" height="90" fill="#1a2332" stroke="#f85149" rx="8"/>
   <text x="600" y="170" text-anchor="middle" fill="#f85149" font-size="18">🔴 CHALLENGER</text>
   <text x="600" y="195" text-anchor="middle" fill="#8b949e" font-size="12">Contredit, trouve les failles</text>
   <text x="600" y="215" text-anchor="middle" fill="#8b949e" font-size="12">Score de contradiction /10</text>
-  
-  <!-- Arrows to Judge -->
-  <line x1="200" y1="230" x2="350" y2="300" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Challenger to Judge -->
   <line x1="600" y1="230" x2="450" y2="300" stroke="#30363d" stroke-width="2"/>
-  
+
   <!-- Judge -->
   <rect x="250" y="300" width="300" height="80" fill="#1a2332" stroke="#d2a943" rx="8"/>
   <text x="400" y="330" text-anchor="middle" fill="#d2a943" font-size="18">⚖️ JUDGE</text>
   <text x="400" y="355" text-anchor="middle" fill="#c9d1d9" font-size="14" font-weight="bold">VRAI / FAUX / INCERTAIN</text>
-  
+
   <!-- Labels -->
   <text x="400" y="395" text-anchor="middle" fill="#484f58" font-size="10">Truth Protocol — freya-truth-protocol</text>
 </svg>

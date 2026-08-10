@@ -76,8 +76,10 @@ Les devs CRUD sont menacés, les devs systèmes complexes non.
 
 ```
 freya-truth-protocol/
-├── truth-debate.py    # Le script principal
-├── README.md          # Ce fichier
+├── truth-debate.py       # Le script principal
+├── truth-diagram.svg     # Architecture actuelle
+├── RESEARCH_ROADMAP.md   # Audit et feuille de route
+├── README.md             # Ce fichier
 └── .gitignore
 ```
 
