@@ -10,6 +10,8 @@ Tu donnes une affirmation. Trois agents IA débattent :
 | 🔴 **Challenger** | La contredit, trouve les failles |
 | ⚖️ **Judge** | Tranche : VRAI / FAUX / INCERTAIN + score de confiance |
 
+![Architecture](https://raw.githubusercontent.com/Yukouf/freya-truth-protocol/main/truth-diagram.svg)
+
 ## Pourquoi ?
 
 Les LLMs sont entraînés pour être **fluides**, pas **vrais**. Un seul modèle peut affirmer n'importe quoi avec aplomb.
