@@ -10,7 +10,9 @@ Tu donnes une affirmation. Trois agents IA débattent :
 | 🔴 **Challenger** | La contredit, trouve les failles |
 | ⚖️ **Judge** | Tranche : VRAI / FAUX / INCERTAIN + score de confiance |
 
-![Architecture](https://raw.githubusercontent.com/Yukouf/freya-truth-protocol/main/truth-diagram.svg)
+![Architecture réelle du protocole](truth-diagram.svg)
+
+Les trois rôles sont exécutés **séquentiellement par le même modèle configuré**. Le Challenger reçoit la défense, puis le Judge reçoit les deux réponses. Le programme n’effectue aucune recherche documentaire ; toute erreur API interrompt le pipeline avec un code non nul et sans verdict.
 
 ## Pourquoi ?
 
