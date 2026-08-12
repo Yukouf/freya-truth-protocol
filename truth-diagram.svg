@@ -1,34 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="monospace">
-  <rect width="800" height="400" fill="#0d1117" rx="10"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Freya Truth Protocol — architecture réelle</title><desc id="desc">Trois appels successifs au même modèle configuré. Aucun accès aux sources ; échec fermé si un rôle ne répond pas.</desc>
+<defs>
+ <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#172033" stroke-width="1"/></pattern>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity=".35"/></filter>
+ <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#64748b"/></marker>
+ <marker id="arrowCyan" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#22d3ee"/></marker>
+ <style>text{font-family:Inter,Segoe UI,Arial,sans-serif} .title{font-size:28px;font-weight:700;fill:#f8fafc}.sub{font-size:14px;fill:#94a3b8}.name{font-size:16px;font-weight:700;fill:#f8fafc}.detail{font-size:12px;fill:#cbd5e1}.tiny{font-size:11px;fill:#94a3b8}.zone{font-size:11px;font-weight:700;letter-spacing:1.5px}.label{font-size:11px;font-weight:600;fill:#cbd5e1} </style>
+</defs>
+<rect width="1200" height="720" rx="18" fill="#070b14"/><rect width="1200" height="720" rx="18" fill="url(#grid)" opacity=".65"/>
+<circle cx="46" cy="47" r="7" fill="#22d3ee"/><text x="66" y="56" class="title">Freya Truth Protocol — architecture réelle</text><text x="46" y="84" class="sub">Trois appels successifs au même modèle configuré. Aucun accès aux sources ; échec fermé si un rôle ne répond pas.</text>
 
-  <!-- Claim -->
-  <rect x="250" y="20" width="300" height="50" fill="#1a2332" stroke="#30363d" rx="8"/>
-  <text x="400" y="50" text-anchor="middle" fill="#c9d1d9" font-size="14" font-weight="bold">🎯 AFFIRMATION</text>
-
-  <!-- Sequential flow: Claim -> Defender -> Challenger -->
-  <line x1="400" y1="70" x2="200" y2="140" stroke="#3fb950" stroke-width="2"/>
-  <line x1="350" y1="185" x2="450" y2="185" stroke="#f85149" stroke-width="2"/>
-
-  <!-- Defender -->
-  <rect x="50" y="140" width="300" height="90" fill="#1a2332" stroke="#3fb950" rx="8"/>
-  <text x="200" y="170" text-anchor="middle" fill="#3fb950" font-size="18">🟢 DEFENDER</text>
-  <text x="200" y="195" text-anchor="middle" fill="#8b949e" font-size="12">Défend avec des preuves</text>
-  <text x="200" y="215" text-anchor="middle" fill="#8b949e" font-size="12">Score de confiance /10</text>
-
-  <!-- Challenger -->
-  <rect x="450" y="140" width="300" height="90" fill="#1a2332" stroke="#f85149" rx="8"/>
-  <text x="600" y="170" text-anchor="middle" fill="#f85149" font-size="18">🔴 CHALLENGER</text>
-  <text x="600" y="195" text-anchor="middle" fill="#8b949e" font-size="12">Contredit, trouve les failles</text>
-  <text x="600" y="215" text-anchor="middle" fill="#8b949e" font-size="12">Score de contradiction /10</text>
-
-  <!-- Challenger to Judge -->
-  <line x1="600" y1="230" x2="450" y2="300" stroke="#30363d" stroke-width="2"/>
-
-  <!-- Judge -->
-  <rect x="250" y="300" width="300" height="80" fill="#1a2332" stroke="#d2a943" rx="8"/>
-  <text x="400" y="330" text-anchor="middle" fill="#d2a943" font-size="18">⚖️ JUDGE</text>
-  <text x="400" y="355" text-anchor="middle" fill="#c9d1d9" font-size="14" font-weight="bold">VRAI / FAUX / INCERTAIN</text>
-
-  <!-- Labels -->
-  <text x="400" y="395" text-anchor="middle" fill="#484f58" font-size="10">Truth Protocol — freya-truth-protocol</text>
+<g filter="url(#shadow)"><rect x="45" y="255" width="180" height="95" rx="12" fill="#0f172a"/><rect x="45" y="255" width="180" height="95" rx="12" fill="#083344" fill-opacity=".42" stroke="#22d3ee" stroke-width="1.7"/></g>
+<circle cx="65" cy="278" r="5" fill="#22d3ee"/><text x="79" y="284" class="name">Affirmation CLI</text>
+<text x="65" y="307" class="detail">Texte fourni par utilisateur</text>
+<rect x="270" y="110" width="630" height="430" rx="16" fill="#0b1220" fill-opacity=".55" stroke="#34d399" stroke-width="1.5" stroke-dasharray="8 7"/><text x="286" y="135" class="zone" fill="#34d399">PIPELINE SÉQUENTIEL — MÊME MODÈLE / MÊME FOURNISSEUR</text>
+<g filter="url(#shadow)"><rect x="305" y="165" width="170" height="105" rx="12" fill="#0f172a"/><rect x="305" y="165" width="170" height="105" rx="12" fill="#064e3b" fill-opacity=".42" stroke="#34d399" stroke-width="1.7"/></g>
+<circle cx="325" cy="188" r="5" fill="#34d399"/><text x="339" y="194" class="name">1 · Defender</text>
+<text x="325" y="217" class="detail">Affirmation en entrée</text>
+<text x="325" y="234" class="detail">Arguments + confiance</text>
+<g filter="url(#shadow)"><rect x="520" y="270" width="170" height="120" rx="12" fill="#0f172a"/><rect x="520" y="270" width="170" height="120" rx="12" fill="#881337" fill-opacity=".42" stroke="#fb7185" stroke-width="1.7"/></g>
+<circle cx="540" cy="293" r="5" fill="#fb7185"/><text x="554" y="299" class="name">2 · Challenger</text>
+<text x="540" y="322" class="detail">Affirmation + défense</text>
+<text x="540" y="339" class="detail">Failles + nuances</text>
+<g filter="url(#shadow)"><rect x="735" y="165" width="130" height="105" rx="12" fill="#0f172a"/><rect x="735" y="165" width="130" height="105" rx="12" fill="#064e3b" fill-opacity=".42" stroke="#34d399" stroke-width="1.7"/></g>
+<circle cx="755" cy="188" r="5" fill="#34d399"/><text x="769" y="194" class="name">3 · Judge</text>
+<text x="755" y="217" class="detail">Les deux réponses</text>
+<text x="755" y="234" class="detail">Verdict + score</text>
+<g filter="url(#shadow)"><rect x="950" y="205" width="205" height="120" rx="12" fill="#0f172a"/><rect x="950" y="205" width="205" height="120" rx="12" fill="#4c1d95" fill-opacity=".42" stroke="#a78bfa" stroke-width="1.7"/></g>
+<circle cx="970" cy="228" r="5" fill="#a78bfa"/><text x="984" y="234" class="name">Synthèse CLI</text>
+<text x="970" y="257" class="detail">VRAI / FAUX / INCERTAIN</text>
+<text x="970" y="274" class="detail">Disclaimer obligatoire</text>
+<text x="970" y="291" class="detail">Pas une vérité objective</text>
+<g filter="url(#shadow)"><rect x="950" y="400" width="205" height="95" rx="12" fill="#0f172a"/><rect x="950" y="400" width="205" height="95" rx="12" fill="#881337" fill-opacity=".42" stroke="#fb7185" stroke-width="1.7"/></g>
+<circle cx="970" cy="423" r="5" fill="#fb7185"/><text x="984" y="429" class="name">Échec fermé</text>
+<text x="970" y="452" class="detail">Erreur API à n’importe quel rôle</text>
+<text x="970" y="469" class="detail">Exit non nul · aucun verdict</text>
+<rect x="1063" y="412" width="78" height="21" rx="10" fill="#fb7185" fill-opacity=".18"/><text x="1102" y="427" text-anchor="middle" class="tiny" fill="#fb7185">FAIL-CLOSED</text>
+<line x1="225" y1="302" x2="305" y2="217" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="242.5" y="240.5" width="45.0" height="19" rx="8" fill="#070b14"/><text x="265.0" y="254.5" text-anchor="middle" class="label">claim</text>
+<line x1="475" y1="217" x2="520" y2="330" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="468.4" y="254.5" width="58.199999999999996" height="19" rx="8" fill="#070b14"/><text x="497.5" y="268.5" text-anchor="middle" class="label">défense</text>
+<line x1="690" y1="330" x2="735" y2="217" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="663.6" y="254.5" width="97.8" height="19" rx="8" fill="#070b14"/><text x="712.5" y="268.5" text-anchor="middle" class="label">contradiction</text>
+<line x1="865" y1="217" x2="950" y2="265" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="878.4" y="222.0" width="58.199999999999996" height="19" rx="8" fill="#070b14"/><text x="907.5" y="236.0" text-anchor="middle" class="label">verdict</text>
+<path d="M585 540 L800 540 L950 447" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<rect x="731.3" y="521" width="137.39999999999998" height="19" rx="8" fill="#070b14"/><text x="800" y="535" text-anchor="middle" class="label">API / réseau / vide</text>
+<text x="585" y="520" text-anchor="middle" class="tiny">Le code ne recherche, ne cite et ne valide aucune source externe.</text>
+<circle cx="55" cy="640" r="5" fill="#22d3ee"/><text x="67" y="644" class="tiny">Entrée / UI</text>
+<circle cx="225" cy="640" r="5" fill="#34d399"/><text x="237" y="644" class="tiny">Traitement réel</text>
+<circle cx="395" cy="640" r="5" fill="#a78bfa"/><text x="407" y="644" class="tiny">Données / sortie</text>
+<circle cx="565" cy="640" r="5" fill="#fb7185"/><text x="577" y="644" class="tiny">Sécurité / humain</text>
+<circle cx="735" cy="640" r="5" fill="#fbbf24"/><text x="747" y="644" class="tiny">Service externe</text>
+<circle cx="905" cy="640" r="5" fill="#64748b"/><text x="917" y="644" class="tiny">Optionnel</text>
 </svg>
